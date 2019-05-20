@@ -1,0 +1,6 @@
+{
+  "id" : "CountryInfoService",
+  "type" : "SoapService",
+  "packageNames" : [ "com.testproject.services.countryinfoservice" ],
+  "title" : "CountryInfoService"
+}

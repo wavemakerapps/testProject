@@ -1,0 +1,134 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "bd9cf0a0-6e49-4eab-a5ed-4ba56fce4218",
+    "x-WM-SERVICE_ID" : "reimaginebanking",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "host" : "api.reimaginebanking.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/reimaginebanking/invoke/56c66be5a73e492741507362/accounts" : {
+      "post" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "reimaginebanking_RestServiceVirtualController-invoke",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "RequestBody",
+          "description" : "RequestBody",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/RootRequest"
+          },
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Object"
+        }, {
+          "name" : "key",
+          "in" : "query",
+          "description" : "key",
+          "required" : false,
+          "type" : "string",
+          "format" : "string",
+          "x-WM-EDITABLE" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/reimaginebanking/invoke/56c66be5a73e492741507362/accounts",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${reimaginebanking.scheme}://${reimaginebanking.host}${reimaginebanking.basepath}/56c66be5a73e492741507362/accounts"
+    }
+  },
+  "definitions" : {
+    "RootRequest" : {
+      "required" : [ "account_number", "balance", "nickname", "rewards", "type" ],
+      "properties" : {
+        "account_number" : {
+          "type" : "string"
+        },
+        "balance" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "nickname" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "rewards" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "reimaginebanking.RootRequest",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "objectCreated" : {
+      "required" : [ "_id", "account_number", "balance", "customer_id", "nickname", "rewards", "type" ],
+      "properties" : {
+        "account_number" : {
+          "type" : "string"
+        },
+        "balance" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "nickname" : {
+          "type" : "string"
+        },
+        "_id" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "customer_id" : {
+          "type" : "string"
+        },
+        "rewards" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "reimaginebanking.objectCreated",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "RootResponse" : {
+      "required" : [ "code", "message", "objectCreated" ],
+      "properties" : {
+        "code" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "objectCreated" : {
+          "$ref" : "#/definitions/objectCreated"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "reimaginebanking.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

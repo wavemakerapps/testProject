@@ -1,5 +1,5 @@
 {
-  "enforceSecurity" : false,
+  "enforceSecurity" : true,
   "loginConfig" : {
     "type" : "PAGE",
     "pageName" : "Login",
@@ -43,7 +43,7 @@
     "parameter" : "WM_AUTH_TOKEN",
     "tokenValiditySeconds" : 1800
   },
-  "authProviders" : [ "DEMO" ],
+  "authProviders" : [ "DATABASE" ],
   "frameOptions" : {
     "enabled" : true,
     "mode" : "SAMEORIGIN",

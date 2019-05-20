@@ -1,0 +1,134 @@
+{
+  "basePath" : "${reimaginebanking.basepath}",
+  "paths" : {
+    "/56c66be5a73e492741507362/accounts" : {
+      "post" : {
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY",
+        "produces" : [ "application/json" ],
+        "operationId" : "reimaginebanking_RestServiceVirtualController-invoke",
+        "responses" : {
+          "200" : {
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            },
+            "description" : "Success"
+          }
+        },
+        "parameters" : [ {
+          "schema" : {
+            "$ref" : "#/definitions/RootRequest"
+          },
+          "in" : "body",
+          "name" : "RequestBody",
+          "description" : "RequestBody",
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.Object",
+          "required" : false
+        }, {
+          "x-WM-EDITABLE" : false,
+          "in" : "query",
+          "name" : "key",
+          "format" : "string",
+          "description" : "key",
+          "type" : "string",
+          "required" : false
+        } ],
+        "tags" : [ "RestServiceVirtualController" ],
+        "consumes" : [ "application/json" ]
+      },
+      "x-WM-BASE_PATH" : "/56c66be5a73e492741507362/accounts",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${reimaginebanking.scheme}://${reimaginebanking.host}${reimaginebanking.basepath}/56c66be5a73e492741507362/accounts"
+    }
+  },
+  "host" : "${reimaginebanking.host}",
+  "schemes" : [ "${reimaginebanking.scheme}" ],
+  "definitions" : {
+    "RootRequest" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "reimaginebanking.RootRequest",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "account_number", "balance", "nickname", "rewards", "type" ],
+      "properties" : {
+        "account_number" : {
+          "type" : "string"
+        },
+        "balance" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "nickname" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "rewards" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    },
+    "objectCreated" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "reimaginebanking.objectCreated",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "_id", "account_number", "balance", "customer_id", "nickname", "rewards", "type" ],
+      "properties" : {
+        "account_number" : {
+          "type" : "string"
+        },
+        "balance" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "nickname" : {
+          "type" : "string"
+        },
+        "_id" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "customer_id" : {
+          "type" : "string"
+        },
+        "rewards" : {
+          "format" : "int32",
+          "type" : "integer"
+        }
+      }
+    },
+    "RootResponse" : {
+      "x-WM-FULLY_QUALIFIED_NAME" : "reimaginebanking.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ],
+      "required" : [ "code", "message", "objectCreated" ],
+      "properties" : {
+        "code" : {
+          "format" : "int32",
+          "type" : "integer"
+        },
+        "objectCreated" : {
+          "$ref" : "#/definitions/objectCreated"
+        },
+        "message" : {
+          "type" : "string"
+        }
+      }
+    }
+  },
+  "swagger" : "2.0",
+  "info" : {
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "bd9cf0a0-6e49-4eab-a5ed-4ba56fce4218",
+    "x-WM-SERVICE_ID" : "reimaginebanking",
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ]
+}

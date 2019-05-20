@@ -1,0 +1,31 @@
+{
+  "endpointAddress" : "https://pozzad-email-validator.p.mashape.com/emailvalidator/validateEmail/{email}",
+  "method" : "GET",
+  "headers" : {
+    "X-Mashape-Key" : [ "mEjfzv3sPwmsheLEhZSudzWy5Ydmp1feeqjjsneGEa30GISCB4" ]
+  },
+  "redirectEnabled" : true,
+  "requestBody" : "",
+  "queryParams" : { },
+  "authDetails" : null,
+  "contentType" : "application/json",
+  "multiParamInfoList" : null,
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 200,
+    "headers" : {
+      "Date" : [ "Mon, 20 May 2019 11:11:59 GMT" ],
+      "Vary" : [ "Accept" ],
+      "X-Powered-By" : [ "Luracast Restler v2.2.0" ],
+      "Content-Length" : [ "21" ],
+      "Server" : [ "RapidAPI-1.0.16" ],
+      "Expires" : [ "0" ],
+      "Cache-Control" : [ "no-cache, must-revalidate" ],
+      "X-RapidAPI-Region" : [ "AWS - us-east-1" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "keep-alive" ],
+      "X-RapidAPI-Version" : [ "1.0.16" ]
+    },
+    "responseBody" : "{\"isValid\":true}",
+    "convertedResponse" : null
+  }
+}

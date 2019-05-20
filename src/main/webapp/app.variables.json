@@ -23,6 +23,52 @@
     "operation" : "gotoPage",
     "pageName" : "Main"
   },
+  "loggedInUser" : {
+    "_id" : "wm-loggedInUser-wm.Variable-1558351998636",
+    "name" : "loggedInUser",
+    "owner" : "App",
+    "category" : "wm.Variable",
+    "dataBinding" : [ ],
+    "dataSet" : {
+      "name" : "",
+      "id" : "",
+      "tenantId" : "",
+      "isAuthenticated" : false,
+      "isSecurityEnabled" : true,
+      "roles" : [ ]
+    },
+    "type" : "string",
+    "isList" : false,
+    "twoWayBinding" : false,
+    "saveInPhonegap" : false
+  },
+  "loginAction" : {
+    "_id" : "wm-loginAction-wm.LoginVariable-1558351998635",
+    "name" : "loginAction",
+    "owner" : "App",
+    "category" : "wm.LoginVariable",
+    "dataBinding" : [ ],
+    "dataSet" : { },
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "startUpdate" : false,
+    "autoUpdate" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "useDefaultSuccessHandler" : true
+  },
+  "logoutAction" : {
+    "_id" : "wm-logoutAction-wm.LogoutVariable-1558351998635",
+    "name" : "logoutAction",
+    "owner" : "App",
+    "category" : "wm.LogoutVariable",
+    "type" : "string",
+    "saveInPhonegap" : false,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "redirectTo" : "Login",
+    "useDefaultSuccessHandler" : true
+  },
   "supportedLocale" : {
     "_id" : "wm-wm.Variable1402640443182",
     "name" : "supportedLocale",

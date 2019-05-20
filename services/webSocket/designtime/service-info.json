@@ -1,0 +1,5 @@
+{
+  "id" : "webSocket",
+  "type" : "WebSocketService",
+  "title" : "webSocket"
+}

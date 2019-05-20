@@ -1,0 +1,19 @@
+{
+  "modelName" : "hrdb",
+  "entityName" : "User",
+  "tableName" : "USER",
+  "unamePropertyName" : "username",
+  "unameColumnName" : "USERNAME",
+  "uidPropertyName" : "userId",
+  "uidColumnName" : "USER_ID",
+  "pwPropertyName" : "password",
+  "pwColumnName" : "PASSWORD",
+  "rolePropertyName" : "",
+  "roleColumnName" : "",
+  "useRolesQuery" : false,
+  "rolesByUsernameQuery" : "",
+  "tenantIdField" : null,
+  "defTenantId" : 0,
+  "tenantIdPropertyName" : null,
+  "queryType" : "HQL"
+}

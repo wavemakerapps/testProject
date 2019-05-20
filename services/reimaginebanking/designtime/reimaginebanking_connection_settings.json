@@ -1,0 +1,29 @@
+{
+  "endpointAddress" : "http://api.reimaginebanking.com/customers/56c66be5a73e492741507362/accounts",
+  "method" : "POST",
+  "headers" : { },
+  "redirectEnabled" : true,
+  "requestBody" : "{\n  \"type\": \"Credit Card\",\n  \"nickname\": \"string\",\n  \"rewards\": 0,\n  \"balance\": 0,\n  \"account_number\": \"1234567890123456\"\n}",
+  "queryParams" : {
+    "key" : "474f2287549cc0cb85e35fa917dea222"
+  },
+  "authDetails" : null,
+  "contentType" : "application/json",
+  "multiParamInfoList" : null,
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 201,
+    "headers" : {
+      "Date" : [ "Mon, 20 May 2019 11:13:43 GMT" ],
+      "Server" : [ "nginx" ],
+      "Content-Type" : [ "application/json; charset=utf-8" ],
+      "Access-Control-Allow-Headers" : [ "Content-Type, Authorization, Content-Length, X-Requested-With" ],
+      "X-Frame-Options" : [ "SAMEORIGIN" ],
+      "Access-Control-Allow-Methods" : [ "GET,PUT,POST,DELETE,OPTIONS" ],
+      "Connection" : [ "keep-alive" ],
+      "Access-Control-Allow-Origin" : [ "*" ],
+      "Content-Length" : [ "233" ]
+    },
+    "responseBody" : "{\"code\":201,\"message\":\"Account created\",\"objectCreated\":{\"type\":\"Credit Card\",\"nickname\":\"string\",\"rewards\":0,\"balance\":0,\"account_number\":\"1234567890123456\",\"customer_id\":\"56c66be5a73e492741507362\",\"_id\":\"5ce28be76759394351beeb50\"}}",
+    "convertedResponse" : null
+  }
+}

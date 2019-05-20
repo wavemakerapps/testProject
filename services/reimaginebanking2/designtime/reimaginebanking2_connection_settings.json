@@ -1,0 +1,28 @@
+{
+  "endpointAddress" : "http://api.reimaginebanking.com/accounts/59194b3cceb8abe24250dd39",
+  "method" : "PUT",
+  "headers" : { },
+  "redirectEnabled" : true,
+  "requestBody" : "{\n  \"nickname\": \"string\",\n  \"account_number\": \"stringstringstri\"\n}",
+  "queryParams" : {
+    "key" : "474f2287549cc0cb85e35fa917dea222"
+  },
+  "authDetails" : null,
+  "contentType" : "application/json",
+  "multiParamInfoList" : null,
+  "sampleHttpResponseDetails" : {
+    "statusCode" : 202,
+    "headers" : {
+      "Server" : [ "nginx" ],
+      "Content-Type" : [ "application/json; charset=utf-8" ],
+      "Access-Control-Allow-Headers" : [ "Content-Type, Authorization, Content-Length, X-Requested-With" ],
+      "Access-Control-Allow-Methods" : [ "GET,PUT,POST,DELETE,OPTIONS" ],
+      "Connection" : [ "keep-alive" ],
+      "Date" : [ "Mon, 20 May 2019 11:14:37 GMT" ],
+      "Access-Control-Allow-Origin" : [ "*" ],
+      "Content-Length" : [ "48" ]
+    },
+    "responseBody" : "{\"code\":202,\"message\":\"Accepted account update\"}",
+    "convertedResponse" : null
+  }
+}

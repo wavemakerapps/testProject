@@ -1,0 +1,72 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-USE_PROXY_FOR_WEB" : true,
+    "x-WM-USE_PROXY_FOR_MOBILE" : true,
+    "x-WM-API_ID" : "17ff37a8-f20e-4383-a5e8-f94a81bd37c6",
+    "x-WM-SERVICE_ID" : "p",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-USE_WITH_CREDENTIALS" : false
+  },
+  "host" : "pozzad-email-validator.p.mashape.com",
+  "basePath" : "",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/p/invoke/validateEmail/{email}" : {
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "p_RestServiceVirtualController-invoke",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "X-Mashape-Key",
+          "in" : "header",
+          "description" : "X-Mashape-Key",
+          "required" : false,
+          "type" : "string",
+          "items" : {
+            "type" : "string"
+          },
+          "x-WM-EDITABLE" : true,
+          "x-WM-FULLY_QUALIFIED_TYPE" : "java.lang.String"
+        }, {
+          "name" : "email",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RootResponse"
+            }
+          }
+        },
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/p/invoke/validateEmail/{email}",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : "",
+      "x-WM-COMPLETE_PATH" : "${p.scheme}://${p.host}${p.basepath}/validateEmail/{email}"
+    }
+  },
+  "definitions" : {
+    "RootResponse" : {
+      "required" : [ "isValid" ],
+      "properties" : {
+        "isValid" : {
+          "type" : "boolean"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "p.RootResponse",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}

@@ -83,8 +83,37 @@
                         <wm-tabpane name="tabpane6"></wm-tabpane>
                     </wm-tabs>
                 </wm-tabpane>
-                <wm-tabpane name="tabpane2" title="Rest Services"></wm-tabpane>
-                <wm-tabpane name="tabpane3" title="JavaService"></wm-tabpane>
+                <wm-tabpane name="tabpane2" title="Rest Services">
+                    <wm-tabs name="tabs3">
+                        <wm-tabpane name="tabpane7" title="RestService">
+                            <wm-table name="pTable1" title="" dataset="bind:Variables.PInvoke.dataSet" navigation="Basic">
+                                <wm-table-column binding="isValid" caption="Is Valid" pcdisplay="true" mobiledisplay="true" type="boolean"></wm-table-column>
+                            </wm-table>
+                        </wm-tabpane>
+                        <wm-tabpane name="tabpane8" title="Soap Services">
+                            <wm-table title="" dataset="bind:Variables.CountryInfoServiceFullCountryInfoAllCountries.dataSet.fullCountryInfoAllCountriesResult.tCountryInfo" navigation="Basic" name="table4">
+                                <wm-table-column binding="sContinentCode" caption="S Continent Code" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                                <wm-table-column binding="sCountryFlag" caption="S Country Flag" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                                <wm-table-column binding="sisoCode" caption="Siso Code" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                                <wm-table-column binding="sCapitalCity" caption="S Capital City" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                                <wm-table-column binding="sName" caption="S Name" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                                <wm-table-column binding="sCurrencyISOCode" caption="S Currency Iso Code" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                                <wm-table-column binding="sPhoneCode" caption="S Phone Code" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                                <wm-table-column binding="languages.tLanguage[0].sisoCode" caption="Languages.tlanguage[0] Siso Code" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                                <wm-table-column binding="languages.tLanguage[0].sName" caption="Languages.tlanguage[0] S Name" pcdisplay="true" mobiledisplay="true" type="string"></wm-table-column>
+                            </wm-table>
+                        </wm-tabpane>
+                        <wm-tabpane name="tabpane9" title="Websocket">
+                            <wm-table name="invokeTable1" title="" dataset="bind:Variables.WebSocket.dataSet" navigation="Basic">
+                                <wm-table-column binding="time" caption="Time" pcdisplay="true" mobiledisplay="true" type="long"></wm-table-column>
+                                <wm-table-column binding="value" caption="Value" pcdisplay="true" mobiledisplay="true" type="integer"></wm-table-column>
+                            </wm-table>
+                        </wm-tabpane>
+                    </wm-tabs>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane3" title="JavaService">
+                    <wm-label padding="unset 0.5em" name="label1" caption="bind:Variables.serviceVariable1.dataSet.value"></wm-label>
+                </wm-tabpane>
             </wm-tabs>
         </wm-page-content>
         <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
