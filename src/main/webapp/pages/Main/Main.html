@@ -3,7 +3,89 @@
     <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
     <wm-content name="content">
         <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
-        <wm-page-content columnwidth="8" paddingleft="15" paddingright="15" name="mainContent">
+        <wm-page-content columnwidth="8" name="mainContent" padding="unset 15px">
+            <wm-tabs name="tabs1">
+                <wm-tabpane name="tabpane1" title="Database">
+                    <wm-tabs name="tabs2">
+                        <wm-tabpane name="tabpane4" title="Data Table">
+                            <wm-livetable formlayout="dialog" name="SaleLiveTable1">
+                                <wm-table gridfirstrowselect="true" editmode="dialog" name="SaleTable1" title="Sale List" dataset="bind:Variables.SalesSaleData.dataSet" navigation="Basic" exportformat="EXCEL,CSV">
+                                    <wm-table-column binding="id" caption="Id" primary-key="true" edit-widget-type="number" type="integer" generator="identity" readonly="true" show="true"></wm-table-column>
+                                    <wm-table-column binding="year" caption="Year" edit-widget-type="number" type="integer" generator="assigned" show="true" readonly="false"></wm-table-column>
+                                    <wm-table-column binding="quarter" caption="Quarter" edit-widget-type="number" type="integer" generator="assigned" show="true" readonly="false"></wm-table-column>
+                                    <wm-table-column binding="date" caption="Date" edit-widget-type="date" type="date" generator="assigned" show="true" readonly="false"></wm-table-column>
+                                    <wm-table-column binding="client" caption="Client" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+                                    <wm-table-column binding="accountManager" caption="Account Manager" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+                                    <wm-table-column binding="revenue" caption="Revenue" edit-widget-type="number" type="double" generator="assigned" show="true" readonly="false"></wm-table-column>
+                                    <wm-table-column binding="product" caption="Product" edit-widget-type="text" type="string" generator="assigned" show="true" readonly="false"></wm-table-column>
+                                    <wm-table-column binding="rowOperations" caption="Actions" width="120px" type="custom" readonly="true" sortable="false" searchable="false" show="true"></wm-table-column>
+                                    <wm-table-action key="addNewRow" display-name="New" show="true" class="btn-primary" iconclass="wi wi-plus" title="New" action="addNewRow()" shortcutkey="" disabled="false" widget-type="button"></wm-table-action>
+                                    <wm-table-row-action key="updaterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-pencil" title="Edit" action="editRow($event)" disabled="false" widget-type="button"></wm-table-row-action>
+                                    <wm-table-row-action key="deleterow" display-name="" show="true" class="btn-transparent" iconclass="wi wi-trash" title="Delete" action="deleteRow($event)" disabled="false" widget-type="button"></wm-table-row-action>
+                                </wm-table>
+                                <wm-liveform errormessage="" title="Sale Info" formlayout="dialog" iconclass="wi wi-edit" name="SaleLiveForm1" dataset="bind:Variables.SalesSaleData.dataSet" captionalign="left" captionposition="top">
+                                    <wm-layoutgrid columns="2" name="layoutgrid1">
+                                        <wm-gridrow name="gridrow1">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn1">
+                                                <wm-form-field name="year" displayname="Year" required="false" show="true" generator="assigned" primary-key="false" key="year" type="integer" is-related="false" defaultvalue="2011" step="0" pc-display="true"
+                                                    mobile-display="true" widget="number"></wm-form-field>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn2">
+                                                <wm-form-field name="quarter" displayname="Quarter" required="false" show="true" generator="assigned" primary-key="false" key="quarter" type="integer" is-related="false" defaultvalue="4" step="0" pc-display="true"
+                                                    mobile-display="true" widget="number"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow2">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn3">
+                                                <wm-form-field name="date" displayname="Date" required="true" show="true" generator="assigned" primary-key="false" key="date" type="date" is-related="false" pc-display="true" mobile-display="true" widget="date"></wm-form-field>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn4">
+                                                <wm-form-field name="client" displayname="Client" required="false" show="true" generator="assigned" primary-key="false" key="client" type="string" is-related="false" maxchars="100" pc-display="true" mobile-display="true"
+                                                    widget="text"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow3">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn5">
+                                                <wm-form-field name="accountManager" displayname="Account Manager" required="false" show="true" generator="assigned" primary-key="false" key="accountManager" type="string" is-related="false" maxchars="100" pc-display="true"
+                                                    mobile-display="true" widget="text"></wm-form-field>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn6">
+                                                <wm-form-field name="revenue" displayname="Revenue" required="false" show="true" generator="assigned" primary-key="false" key="revenue" type="double" is-related="false" defaultvalue="0" step="0.01" pc-display="true"
+                                                    mobile-display="true" widget="number"></wm-form-field>
+                                            </wm-gridcolumn>
+                                        </wm-gridrow>
+                                        <wm-gridrow name="gridrow4">
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn7">
+                                                <wm-form-field name="product" displayname="Product" required="false" show="true" generator="assigned" primary-key="false" key="product" type="string" is-related="false" maxchars="30" pc-display="true" mobile-display="true"
+                                                    widget="text"></wm-form-field>
+                                            </wm-gridcolumn>
+                                            <wm-gridcolumn columnwidth="6" name="gridcolumn8"></wm-gridcolumn>
+                                        </wm-gridrow>
+                                    </wm-layoutgrid>
+                                    <wm-form-field name="id" displayname="Id" required="true" show="false" generator="identity" primary-key="true" key="id" type="integer" is-related="false" step="0" pc-display="true" mobile-display="true" widget="number"></wm-form-field>
+                                    <wm-form-action key="cancel" class="form-cancel btn-secondary" iconclass="wi wi-cancel" action="cancel()" display-name="Cancel" show="true" type="button" update-mode="true"></wm-form-action>
+                                    <wm-form-action key="save" class="form-save btn-success" iconclass="wi wi-save" display-name="Save" show="true" type="submit" update-mode="true"></wm-form-action>
+                                </wm-liveform>
+                            </wm-livetable>
+                        </wm-tabpane>
+                        <wm-tabpane name="tabpane5" title="Query Data">
+                            <wm-table name="executeSalesDataTable1" title="" dataset="bind:Variables.SalesExecuteSalesData.dataSet" navigation="Basic" exportformat="EXCEL,CSV">
+                                <wm-table-column binding="year" caption="Year" edit-widget-type="number" type="integer" show="true" readonly="false"></wm-table-column>
+                                <wm-table-column binding="date" caption="Date" edit-widget-type="date" type="date" show="true" readonly="false"></wm-table-column>
+                                <wm-table-column binding="accountManager" caption="Account Manager" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                                <wm-table-column binding="revenue" caption="Revenue" edit-widget-type="number" type="double" show="true" readonly="false"></wm-table-column>
+                                <wm-table-column binding="product" caption="Product" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                                <wm-table-column binding="quarter" caption="Quarter" edit-widget-type="number" type="integer" show="true" readonly="false"></wm-table-column>
+                                <wm-table-column binding="client" caption="Client" edit-widget-type="text" type="string" show="true" readonly="false"></wm-table-column>
+                                <wm-table-column binding="id" caption="Id" edit-widget-type="number" type="integer" show="true" readonly="false"></wm-table-column>
+                            </wm-table>
+                        </wm-tabpane>
+                        <wm-tabpane name="tabpane6"></wm-tabpane>
+                    </wm-tabs>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane2" title="Rest Services"></wm-tabpane>
+                <wm-tabpane name="tabpane3" title="JavaService"></wm-tabpane>
+            </wm-tabs>
         </wm-page-content>
         <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
